@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملاحظات خزانات محايل majaradh-mahaiel-report-part1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ملاحظات خزانات محايل</h1>
+        <h4>    majaradh-mahaiel-report-part1</h1>
+        <table id="notesTable">
+            <tr>
+                <th>الملاحظة</th>
+                <th>تفاصيل إضافية</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>١- مخلفات المشروع امام مدخل المشروع</td>
+                <td> رفيق شيويل </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>٢- تغيرات امنية عالية الخطورة بجميع خزانات ومحطات ضخ خط نقل مياه محايل عسير المجاردة لا يوجد بها بوابات وتجهيزات أمينه ،ولم يتم اكمال تركيب السياجات الأمنية بالإضافة إلى عدم وجود رجال أمن لحماية المواقع المكشوفة.</td>
+                <td>حراسة  عبد المجيد - صور للسياج </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>٣- اغلب المنهولات مفتوحة ولا يوجد حماية</td>
+                <td> رفيق </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>٤- مخاطر كهربائية</td>
+                <td> رفيق - كهربائي</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div class="photos">
+            <img src="https://samerguda.github.io/mahaiel-report//mahaiel-report/1-mahaiel-tanks/1.png" width="400px"  alt="Photo 1">
+            <img src="https://samerguda.github.io/mahaiel-report//mahaiel-report/1-mahaiel-tanks/2.png"  width="400px" alt="Photo 2">
+            <img src="https://samerguda.github.io/mahaiel-report//mahaiel-report/1-mahaiel-tanks/3.png"  width="400px" alt="Photo 3">
+            <img src="https://samerguda.github.io/mahaiel-report//mahaiel-report/1-mahaiel-tanks/4.png"  width="400px" alt="Photo 4">
+        </div>
+
+        <button onclick="copyTableContent()">نسخ المحتوى</button>
+        <button onclick="window.print()">طباعة</button>
+    </div>
+
+        <button onclick="copyTableContent()">نسخ المحتوى</button>
+        <button onclick="window.print()">طباعة</button>
+    </div>
+
+    <script>
+        function copyTableContent() {
+            let range = document.createRange();
+            range.selectNode(document.getElementById("notesTable"));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            alert("تم نسخ المحتوى");
+        }
+    </script>
+</body>
+</html>
